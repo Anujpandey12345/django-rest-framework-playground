@@ -44,10 +44,42 @@ I will gradually add implementations and examples for:
 
 ```text
 drf-by-building/
-│── core/
-│── api/
-│   ├── serializers/
-│   ├── views/
+│
+├── core/                       # Django project settings
+│   ├── __init__.py
+│   ├── settings.py
 │   ├── urls.py
-│── requirements.txt
-│── manage.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── apps/
+│   ├── students/               # Example app (you can add more)
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── throttles.py
+│   │   └── tests.py
+│   │
+│   └── accounts/               # Auth / JWT / Users (later)
+│       ├── migrations/
+│       ├── models.py
+│       ├── serializers.py
+│       ├── views.py
+│       └── urls.py
+│
+├── common/                     # Reusable utilities
+│   ├── pagination.py
+│   ├── filters.py
+│   ├── permissions.py
+│   └── utils.py
+│
+├── requirements.txt
+├── manage.py
+├── README.md
+└── .gitignore
