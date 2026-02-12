@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .serializers import Student
+from .models import Student
 
 
 
